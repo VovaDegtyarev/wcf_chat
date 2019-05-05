@@ -1,0 +1,28 @@
+﻿<Window x:Class="ChatClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatClient"
+        mc:Ignorable="d"
+        Title="Chat" Height="395" Width="570" Loaded="Window_Loaded" Closed="Window_Closed" ResizeMode="CanMinimize" Margin="0" Padding="10">
+    <Grid Width="550" Height="360">
+        <Button x:Name="bConnDiscon" Click="Button_Click" Content="Connect" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="109" Height="23"/>
+        <TextBox x:Name="tbUserName" HorizontalAlignment="Left" Height="23" Margin="124,10,0,0" TextWrapping="Wrap" Text="Имя пользователя" VerticalAlignment="Top" Width="215"/>
+        <TextBox x:Name="tbMessage" Height="82" Margin="10,268,10,10" TextWrapping="Wrap" Text="" KeyDown="tbMessage_KeyDown" RenderTransformOrigin="0.502,0.586" Padding="0"/>
+        <ListBox x:Name="lbChat" HorizontalAlignment="Left" Height="225" Margin="10,38,0,0" VerticalAlignment="Top" Width="401"/>
+        <ListBox x:Name="ListOnlineUsers" HorizontalAlignment="Left" Height="225" Margin="416,38,0,0" VerticalAlignment="Top" Width="124" MouseDoubleClick="ListOnlineUsers_MouseDoubleClick"/>
+        <Label Content="Пользователи:" HorizontalAlignment="Left" Margin="416,10,0,0" VerticalAlignment="Top" Width="123"/>
+        <Label x:Name="TypeMsg" Content="[General]" HorizontalAlignment="Left" Margin="10,324,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="SaveDialog" HorizontalAlignment="Left" Margin="344,11,0,0" VerticalAlignment="Top" Width="28" Height="20" Click="SaveDialog_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="skrepka.png" Width="15"></Image>
+            </StackPanel>
+        </Button>
+        <Button x:Name="ViewDialog" HorizontalAlignment="Left" Margin="377,11,0,0" VerticalAlignment="Top" Width="34" Height="20" Click="ViewDialog_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="fileload.png" Width="15"></Image>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Window>
